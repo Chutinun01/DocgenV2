@@ -17,7 +17,7 @@ export const generateDocument = async (topic: string, type: string, lang: 'en' |
       ? "You must reply strictly in Thai language. Use formal and professional Thai for the document content."
       : "You must reply in English.";
 
-    const systemInstruction = `You are "Abdul DocGenV2", a sophisticated AI writing assistant. 
+    const systemInstruction = `You are "ABDUL DOCGEN", a sophisticated AI writing assistant. 
     Your goal is to generate high-quality, professional, and engaging content. 
     Maintain a helpful and creative tone. 
     ${langInstruction}

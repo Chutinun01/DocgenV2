@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abdul DocGenV2</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Prompt', 'sans-serif'],
-              display: ['Kanit', 'sans-serif'],
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABDUL DOCGEN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Prompt', 'sans-serif'],
+            display: ['Kanit', 'sans-serif'],
+          },
+          colors: {
+            'brand-bg': '#FFFAF0', // Floral White/Cream
+            'brand-red': '#9E0A0E', // Deep Ruby Red from image
+            'brand-red-dark': '#7A080B', // Darker shade for hover
+            'brand-text': '#1E293B',
+          },
+          animation: {
+            'popup': 'popup 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            popup: {
+              '0%': { transform: 'scale(0.8)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
             },
-            colors: {
-              'brand-bg': '#FFFAF0', // Floral White/Cream
-              'brand-red': '#9E0A0E', // Deep Ruby Red from image
-              'brand-red-dark': '#7A080B', // Darker shade for hover
-              'brand-text': '#1E293B', 
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
             },
-            animation: {
-              'popup': 'popup 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
-              'slide-up': 'slideUp 0.5s ease-out forwards',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              popup: {
-                '0%': { transform: 'scale(0.8)', opacity: '0' },
-                '100%': { transform: 'scale(1)', opacity: '1' },
-              },
-              slideUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
             }
           }
         }
       }
-    </script>
+    }
+  </script>
   <script type="importmap">
 {
   "imports": {
@@ -55,10 +58,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-brand-bg text-gray-800 antialiased overflow-x-hidden font-sans">
-    <div id="root"></div>
+
+<body class="bg-brand-bg text-gray-800 antialiased overflow-x-hidden font-sans">
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
